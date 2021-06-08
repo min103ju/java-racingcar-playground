@@ -24,3 +24,25 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+---
+## 문자열 계산기
+### 기능 요구사항
+1. 쉽표, 콜론을 구분자로 가지는 문자열을 인자로 한다.
+2. 각 분리한 숫자의 합을 반환
+3. 커스텀한 구분자를 얻을 수 있다.
+    1. "//"와 "\n" 사이에 있는 문자가 구분자이다.
+4. 숫자 이외 또는 음수가 전달되는 경우 RuntimeException을 발생.
+
+### 초기 조건
+1. 빈 문자열(혹은 null)
+2. 숫자 하나만 입력할 경우 해당 숫자를 반환
+
+### 프로그래밍 요구사항
+1. indent <= 1
+2. method는 10line 이내
+3. Don't use else
+
+1. 구분자를 판별하기
+2. 판별된 구분자로 split 하는 것
+3. split된 숫자를 합하기
+4. split된 문자 중에 음수나 숫자가 아니면 throw Exception
