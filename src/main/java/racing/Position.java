@@ -14,4 +14,8 @@ public class Position {
     public int getPosition() {
         return this.position;
     }
+
+    public boolean isSame(int winnerPosition) {
+        return this.position == winnerPosition;
+    }
 }

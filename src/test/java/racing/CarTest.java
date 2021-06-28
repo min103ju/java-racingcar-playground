@@ -8,6 +8,20 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class CarTest {
 
+    @DisplayName("자동차 완주 검증 테스트")
+    @Test
+    void isWinnerTest() {
+        // given
+        int winnerPosition = 3;
+        Car car = new Car(new CarName("car"), new Position(3));
+
+        // when
+        boolean actual = car.isWinner(winnerPosition);
+
+        // then
+        assertThat(actual).isTrue();
+    }
+
     @DisplayName("자동차 전진 테스트")
     @Test
     void moveCarTest() {
