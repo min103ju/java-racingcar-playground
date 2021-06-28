@@ -1,4 +1,5 @@
 package stringTest;
 
-public interface CustomHandleRuntimeException {
+public interface CustomHandleRuntimeException<T, R> {
+    R apply(T t) throws RuntimeException;
 }
