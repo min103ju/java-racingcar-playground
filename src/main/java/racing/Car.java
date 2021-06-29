@@ -1,6 +1,9 @@
 package racing;
 
 public class Car {
+
+    private final int MOVE_CONDITION_NUM = 4;
+
     private final CarName carName;
     private final Position position;
 
@@ -15,7 +18,7 @@ public class Car {
     }
 
     public void move(int randomValue) {
-        if (randomValue >= 4) {
+        if (randomValue >= MOVE_CONDITION_NUM) {
             this.position.move();
         }
     }
@@ -24,7 +27,15 @@ public class Car {
         return this.position;
     }
 
+    public String getCarName() {
+        return carName.getName();
+    }
+
     public boolean isWinner(int winnerPosition) {
         return this.position.isSame(winnerPosition);
+    }
+
+    public void print() {
+        System.out.println(carName.getName() + ": " + position.getPositionMarker());
     }
 }

@@ -20,4 +20,8 @@ public class CarName {
 
         return true;
     }
+
+    public String getName() {
+        return name;
+    }
 }
