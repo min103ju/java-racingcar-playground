@@ -23,9 +23,10 @@ public class Cars {
         return this.cars;
     }
 
-    public List<Car> findWinner(int goal) {
+    public List<String> findWinner(int goal) {
         return this.cars.stream()
                 .filter(car -> car.isPositionSame(goal))
+                .map(car -> car.getCarName())
                 .collect(Collectors.toList());
     }
 }

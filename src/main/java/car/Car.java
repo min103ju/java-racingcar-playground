@@ -42,9 +42,19 @@ public class Car {
         if (moveStrategy.movable()) {
             this.position.move();
         }
+        print();
+    }
+
+    private void print() {
+        System.out.print(carName.getName() + " : ");
+        System.out.println(this.position.getMarker());
     }
 
     public boolean isPositionSame(int position) {
         return this.position.isSame(position);
+    }
+
+    public String getCarName() {
+        return this.carName.getName();
     }
 }
