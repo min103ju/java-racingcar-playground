@@ -1,7 +1,5 @@
 package racing;
 
-import javax.xml.namespace.QName;
-
 public class CarName {
     private final String name;
 
