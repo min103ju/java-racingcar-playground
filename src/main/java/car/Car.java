@@ -13,8 +13,16 @@ public class Car {
     }
 
     public Car(CarName carName) {
+        this(carName, new Position(0));
+    }
+
+    public Car(String carName, int position) {
+        this(new CarName(carName), new Position(position));
+    }
+
+    public Car(CarName carName, Position position) {
         this.carName = carName;
-        this.position = new Position(0);
+        this.position = position;
     }
 
     @Override
